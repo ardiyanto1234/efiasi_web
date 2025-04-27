@@ -1,0 +1,269 @@
+body {
+    font-family: "DM Sans", sans-serif;
+}
+.img-white {
+    filter: brightness(0) invert(1);
+}
+
+.img-black {
+    filter: brightness(100%) invert(0);
+}
+.icon {
+    background-image: linear-gradient(to right top, #ff8577, #ffd8c2);
+    color: white;
+}
+#add-btn {
+    background-image: linear-gradient(to right top, #ff8577, #ffd8c2);
+}
+
+#search-btn {
+    padding: 7px;
+    background-image: linear-gradient(to right top, #ff8577, #ffd8c2);
+    color: #ffff;
+}
+
+#search-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.btn.btn-outline-warning:hover {
+    color: #fff; /* Warna teks menjadi putih */
+    background-color: #ffc107; /* Warna latar belakang menjadi warna dari btn-warning */
+}
+.btn.btn-outline-danger:hover {
+    color: #fff;
+    background-color: #dc3545;
+}
+#ikhtisar-pesanan {
+    height: 230px;
+    width: 100%;
+    overflow-y: auto;
+    margin-top: 5px;
+    padding: 10px;
+    /* display: flex;
+    align-item: center;
+    text-align: center; */
+}
+/* Aturan untuk menyesuaikan warna ikon saat menu aktif */
+.nav-link.active .icon-shape svg path {
+    fill: white; /* Warna ikon */
+}
+/* Aturan untuk menyesuaikan latar belakang saat menu aktif */
+.nav-link.active .icon-shape {
+    background-image: linear-gradient(
+        to bottom,
+        #ff8577,
+        #ffd8c2
+    ) !important; /* Warna latar belakang oranye dengan !important */
+}
+#info-bengkel {
+    background-image: linear-gradient(to right top, #ff8577, #ffd8c2);
+}
+#trans-card {
+    border-top-left-radius: 20px;
+    background-image: linear-gradient(to right top, #ff8577, #ffd8c2);
+}
+#title-trans {
+    color: white;
+}
+#shadow-2 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 20px;
+    color: #fff;
+    background-image: linear-gradient(to right top, #ff8577, #ffd8c2);
+}
+#card-notif {
+    margin-right: 20px;
+}
+#badge-notif {
+    margin-left: 60px;
+    border: 1px solid #ff8577;
+    background-color: none;
+    color: #ff8577;
+}
+#btn-confirm {
+    margin-right: 10px;
+    border: 1px solid #28a745;
+    color: #28a745;
+}
+#btn-confirm:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+#btn-edit {
+    margin-right: 20px;
+    border: 1px solid #ffc107; /* Warna border */
+    color: #ffc107; /* Warna teks */
+}
+#btn-edit:hover {
+    background-color: #ffc107;
+    color: white;
+}
+
+#btn-cancel {
+    border: 1px solid #dc3545;
+    color: #dc3545;
+}
+#btn-cancel:hover {
+    background-color: #dc3545;
+    color: white;
+}
+#profile_picture {
+    border-radius: 10px;
+}
+#btn-excel {
+    display: inline-block;
+    align-item: center;
+    padding: 10px;
+    border: 2px solid #217346;
+    border-radius: 5px;
+    background-color: white;
+    color: #217346;
+    text-decoration: none;
+    transition: background-color 1s, color 1s, border-color 1s;
+}
+#btn-excel:hover {
+    background-color: #217346;
+    border-color: none;
+    color: white;
+}
+
+#btn-excel svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    fill: #217346;
+}
+
+#btn-excel:hover svg {
+    fill: white;
+}
+
+.close-button {
+    font-size: 20px;
+    border: none;
+    background: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.pagination {
+    margin-top: 20px;
+    padding-bottom: -50px;
+}
+.pagination a {
+    border: 1px solid #ff8577;
+    color: #ff8577 !important;
+}
+
+.pagination a:hover {
+    background-color: #ff8577 !important;
+    color: white !important;
+    border: none;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #ff8577 !important;
+    color: white;
+    border: none;
+}
+
+#previews {
+    background-color: #fbfdff;
+    border: 1px dashed #c0ccda;
+    border-radius: 6px;
+    padding: 60px;
+    text-align: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.dropzone {
+    box-shadow: 0px 2px 20px 0px #f2f2f2;
+    border-radius: 10px;
+}
+
+.dot-success {
+    width: 10px;
+    height: 10px;
+    background-color: #28a745; /* Warna hijau */
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 5px; /* Jarak dari kiri */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.custom-orange {
+    color: #ff8577;
+}
+
+.custom-orange:hover {
+    color: white;
+    background-color: #ff8577 !important;
+}
+
+#table-show-account {
+    height: 220px;
+    width: 100%;
+    overflow: auto;
+}
+
+#order-con-list {
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#order-con-list:hover {
+    color: #6c757d;
+}
+
+#wa-logo {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#wa-logo:hover {
+    color: #28a745;
+}
+
+.font-ms {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.card-header .d-flex {
+    flex-wrap: wrap;
+}
+
+.card-header form {
+    flex-grow: 1;
+    margin-bottom: 10px; /* Atur jarak bawah untuk form */
+}
+
+.card-header .btn {
+    white-space: nowrap; /* Agar teks tombol tidak terpotong */
+}
+
+@media (max-width: 576px) {
+    .card-header .d-flex {
+        flex-direction: column;
+    }
+
+    .card-header form {
+        width: 100%;
+        margin-bottom: 10px; /* Atur jarak bawah untuk form */
+    }
+
+    .card-header .btn {
+        width: 100%; /* Agar tombol mengambil seluruh lebar */
+        margin-top: 10px; /* Atur jarak atas untuk tombol */
+    }
+}
