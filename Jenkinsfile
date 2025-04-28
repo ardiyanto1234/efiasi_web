@@ -9,7 +9,12 @@ pipeline {
                     def npmCheck = sh(script: 'which npm', returnStatus: true)
                     
                     if (nodeCheck != 0 || npmCheck != 0) {
-                        error("Node.js or npm is not installed on this system!")
+                        echo "Node.js or npm is not installed. Installing now..."
+                        // Install Node.js and npm if not found
+                        sh """
+                        sudo apt-get update
+                        sudo apt-get install -y nodejs npm
+                        """
                     }
                 }
             }
