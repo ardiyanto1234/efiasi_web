@@ -1,18 +1,46 @@
 pipeline {
     agent any
+
+    environment {
+        GIT_REPO = 'https://github.com/ardiyanto1234/efiasi_web.git' // Ganti dengan repo Anda
+        BRANCH = 'master'  // Ganti dengan branch yang sesuai
+    }
+
     stages {
         stage('Checkout') {
             steps {
-                checkout scm  // Checkout the code from the repository
+                // Clone repositori dari GitHub
+                git branch: "${BRANCH}", url: "${GIT_REPO}"
             }
         }
-        stage('Build efiasi_web') {
+        
+        stage('Build') {
             steps {
-                script {
-                    // Trigger the build of 'efiasi_web' project
-                    build job: 'efiasi_web', wait: true  // Set wait to true if you want to wait for the build to finish
-                }
+                // Menjalankan build project, misalnya untuk Node.js
+                sh 'npm install'
             }
+        }
+        
+        stage('Test') {
+            steps {
+                // Menjalankan test (misalnya unit test)
+                sh 'npm test'
+            }
+        }
+    }
+    
+    post {
+        always {
+            // Menampilkan laporan setelah selesai
+            echo 'Pipeline selesai!'
+        }
+        success {
+            // Jika pipeline berhasil
+            echo 'Build dan testing berhasil!'
+        }
+        failure {
+            // Jika pipeline gagal
+            echo 'Build atau testing gagal!'
         }
     }
 }
