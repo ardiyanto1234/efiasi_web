@@ -11,5 +11,6 @@ pipeline {
                 bat 'npm run build'  // Again, using bat instead of sh
             }
         }
+        
     }
 }
