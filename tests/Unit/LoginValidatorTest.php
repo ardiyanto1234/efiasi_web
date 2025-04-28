@@ -12,5 +12,6 @@ class LoginValidatorTest extends TestCase
     public function test_example(): void
     {
         $this->assertTrue(true);
+        
     }
 }
