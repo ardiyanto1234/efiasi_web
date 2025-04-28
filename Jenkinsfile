@@ -5,20 +5,20 @@ pipeline {
             steps {
                 script {
                     if (isUnix()) {
-                        sh 'composer install'  // Install dependencies menggunakan Composer di Linux
+                        sh 'npm install'  // Use 'sh' for Linux/Mac
                     } else {
-                        bat 'composer install'  // Install dependencies menggunakan Composer di Windows
+                        bat 'npm install'  // Use 'bat' for Windows
                     }
                 }
             }
         }
-        stage('Start Development Server') {
+        stage('Build Project') {
             steps {
                 script {
                     if (isUnix()) {
-                        sh 'php artisan serve --host=0.0.0.0 --port=8000'  // Menjalankan server Laravel di Linux
+                        sh 'npm run build'  // Use 'sh' for Linux/Mac
                     } else {
-                        bat 'php artisan serve --host=0.0.0.0 --port=8000'  // Menjalankan server Laravel di Windows
+                        bat 'npm run build'  // Use 'bat' for Windows
                     }
                 }
             }
