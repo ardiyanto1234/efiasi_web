@@ -1,14 +1,17 @@
 pipeline {
     agent any
     stages {
-        stage('Install Dependencies') {
+        stage('Checkout') {
             steps {
-                bat 'npm install'  // Replace sh with bat for Windows
+                checkout scm  // Checkout the code from the repository
             }
         }
-        stage('Build Project') {
+        stage('Build efiasi_web') {
             steps {
-                bat 'npm run build'  // Again, using bat instead of sh
+                script {
+                    // Trigger the build of 'efiasi_web' project
+                    build job: 'efiasi_web', wait: true  // Set wait to true if you want to wait for the build to finish
+                }
             }
         }
     }
